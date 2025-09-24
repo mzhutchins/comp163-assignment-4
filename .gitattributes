@@ -10,3 +10,42 @@ print(f'Study Hours: {study_hours}')
 print(f'Social Points: {social_points}')
 print(f'Stress Level: {stress_level}')
 
+print("Choose your course load:")
+print("A) Light (12 credits)")
+print("B) Standard (15 credits)")
+print("C) Heavy (18 credits)")
+
+choice = input("Your choice: ")
+if choice == 'A':
+    if current_gpa <= 2.7:
+        print('You might need to change things up.')
+        study_hours += 5
+        social_points -= 10
+        stress_level += 20
+    else :
+        study_hours += 5
+        social_points += 20
+        stress_level -= 10
+
+elif choice == 'B':
+    if current_gpa >= 3.0 and stress_level < 70:
+        print('You\'re doing good, keep going.')
+        study_hours += 5
+        social_points += 5
+    elif current_gpa <= 2.5 or stress_level < 40:
+        social_points -= 27
+        study_hours += 15
+        stress_level += 40
+
+elif choice == 'C':
+    if current_gpa >= 3.5:
+        study_hours += 1
+        social_points += 30
+    elif current_gpa < 3.5:
+        print('Reduce your course load')
+        study_hours += 10
+        stress_level += 17
+
+else:
+    print("Invalid choice")
+
