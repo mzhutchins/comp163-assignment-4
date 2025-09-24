@@ -1,2 +1,12 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+student_name = 'Marcellus Hutchins'
+current_gpa = 3.5
+study_hours =  10
+social_points = 50
+stress_level = 73
+
+print(f'Student Name: {student_name}')
+print(f'Current GPA: {current_gpa}')
+print(f'Study Hours: {study_hours}')
+print(f'Social Points: {social_points}')
+print(f'Stress Level: {stress_level}')
+
