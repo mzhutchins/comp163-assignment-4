@@ -49,3 +49,54 @@ elif choice == 'C':
 else:
     print("Invalid choice")
 
+study_options = ["Programming", "Math", "English", "History"]
+print(study_options)
+user_study = input('What would you like to study? ')
+act_study = [user_study]
+if user_study in study_options:
+    if user_study == 'Programming':
+        if current_gpa < 3 or social_points > 75:
+            study_hours += 7
+            current_gpa += 0.8
+            print('GPA Grid Timeee!')
+        else:
+            print('Congrats, you learned two new Languages.')
+            act_study.append('Java')
+            act_study.append('Python')
+            study_hours += 10
+    elif user_study == 'Math':
+        if current_gpa < 2.7 and social_points > 65:
+            print('Tough battle huh?')
+            stress_level += 27
+            study_hours += 15
+        elif current_gpa > 3.8:
+            print('Your friends are taking you out of your cave...')
+            stress_level -= 30
+            current_gpa -= 0.2
+            study_hours -= 12
+        else:
+            print('Good Choice')
+            current_gpa += 0.3
+            study_hours += 5
+
+    elif user_study == 'English':
+        if current_gpa > 3.5 and social_points > 65:
+            print('Unfortunately, you are not just getting the concept')
+            stress_level -= 30
+            current_gpa -= 0.6
+        elif current_gpa < 3.5 and social_points < 65:
+            print('Reading may be easy but it is time consuming.')
+            social_points -= 20
+            study_hours += 20
+            current_gpa += 0.2
+
+    elif user_study == 'History':
+        if current_gpa < 2.7 or social_points > 50:
+            study_hours += 5
+            current_gpa += 0.1
+            act_study.append('Theocratic Laws')
+            act_study.append('Trade Routes')
+            print('New Study Concepts')
+
+elif user_study not in study_options:
+    print("Invalid choice")
