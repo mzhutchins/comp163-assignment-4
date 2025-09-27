@@ -1,3 +1,4 @@
+import random
 student_name = 'Marcellus Hutchins'
 current_gpa = 3.5
 study_hours =  10
@@ -100,3 +101,117 @@ if user_study in study_options:
 
 elif user_study not in study_options:
     print("Invalid choice")
+
+
+b= 44
+y = 19
+system_health = 100
+print('Error')
+print('The System is Alive.')
+print('Test you Might -System')
+print('Enter a Number 1-75')
+battle = random.randint(1,75)
+if (battle >= 1) and (battle <= 25):
+    print("TEST YOUR INTELLECT")
+    if current_gpa >= 3.5 and study_hours > 40:
+        print('-20 HP')
+        print('IS THAT ALL YOU GOT')
+        system_health -= 20
+        if current_gpa >= 4 and study_hours >= 55:
+            print('-40 HP')
+            print('UGH AHHH, YOU RAT!')
+            system_health -= 40
+            if choice == 'C':
+                print('-60 CRIT')
+                system_health -= 60
+if (battle >= 25) and (battle <= 50):
+    print('Fine, We battle on your Terms...')
+    new_bat = input('Pick your field')
+    if new_bat in study_options:
+        if new_bat == 'Programming':
+            print('YOU\'D THINK ID LOSE IN A BATTLE OF CODE?!?')
+            print('Game over')
+        if new_bat == 'English':
+            print('Ah A Worthy Opponent')
+            if choice != 'A' or 'B':
+                system_health -= 10
+                print('-10 HP')
+                print('\'The System is Laughing\'')
+            elif choice == 'A' or 'B':
+                print('hmmm')
+                print('-30')
+            elif social_points > 70:
+                print('\'You call upon your Friends \'')
+                print('How DARE YOU COWARD')
+                print('-30')
+                system_health -= 30
+                if stress_level < 70:
+                    print('-60')
+                    system_health -= 60
+                    print('DO YOU HAVE NO NERVES')
+                else:
+                    print('-20')
+                    system_health -= 20
+if (battle >= 50) and (battle <= 75):
+
+    new_bat = input('Pick your field')
+    if new_bat == 'History' or 'English':
+        if current_gpa > 3 and stress_level < 50:
+            print("MY WEAKNESS")
+            print('AGHHHHHHH')
+            print('YOU ARE GOOD')
+            system_health -= 100
+            print('-100 HP CRITTTT')
+        elif current_gpa > 3 or stress_level < 50:
+            print('Ugh my Weakness)')
+            system_health -= 40
+            print('-40 HP CRIT')
+        elif social_points > 70:
+            print('-20')
+            system_health -= 20
+        elif 'a' in student_name:
+            print(f'{student_name} you are doing well, BUT I AM BETTER')
+            print('HEAL +50')
+            system_health += 50
+    if new_bat == 'Math':
+        print('A battle of Wits HUH')
+        print('what is (2x^2 + 4x^2 = 6x^2, x = 1')
+        print('Challenge, (x+3)(2x^2 - x +4)+(x^2 - 5x) x=2')
+        x = int(input('Enter a Number'))
+        if x is y:
+            system_health -= 25
+            print('-25 HP')
+        elif x is not b or y:
+            system_health += 40
+            print('Heal +40 HP')
+        elif x is b :
+            system_health -= 75
+            print('-75 HP')
+            print(f'WELL DONE {student_name}')
+else:
+    print('Invalid choice')
+    print('Invalid choice')
+    print('YOU DARE DEFY ME')
+    print('Game over')
+    print('PLAYER HEALTH -9999')
+
+f = 30
+g = 0
+h = 60
+print('In the End you had:')
+print(f'Your GPA is {current_gpa}')
+print(f'Your Study hours is {study_hours}')
+print(f'Your Social Points are {social_points}')
+print(f'Your stress level is {stress_level}')
+if system_health is g or system_health < 0:
+    if current_gpa > 3:
+        print('You Have Bested the System')
+elif system_health is f or 0 < system_health <= 30:
+    if stress_level > 40:
+        print('I told you id win....')
+elif system_health < 60 and system_health > 30:
+    if study_hours > 20:
+        print("Did you even Try...")
+elif system_health > 60:
+    print('TRY AGAIN ROACH')
+
